@@ -1,0 +1,45 @@
+package com.baozi.steamedCommon.constant;
+
+public class MessageConstant {
+    public static final Long ZERO = 0L;
+    public static final String ID_IS_NULL = "X-User-Id为空";
+    public static final String ID_FORMAT_ERROR = "X-User-Id格式错误";
+    public static final String NOT_LOGIN = "未登录";
+    public static final String USER_IS_EMPTY = "用户不存在";
+    public static final String USER_IS_EXIST = "用户已存在";
+    public static final String PHONE_IS_EMPTY = "手机号不能为空";
+    public static final String USERNAME_IS_EMPTY = "账号不能为空";
+    public static final String PASSWORD_IS_EMPTY = "密码不能为空";
+    public static final String REALNAME_IS_EMPTY = "真实姓名不能为空";
+    public static final String USERNAME_TOLONG = "登录账号不能超过20个字符";
+    public static final String REALNAME_TOLONG = "真实姓名不能超过10个字符";
+    public static final String PHONE_NOT_MATCH = "手机号格式不正确";
+    public static final String USERNAME_NOT_MATCH = "账号不匹配";
+    public static final String ONLY_LETTERS_AND_NUMBERS= "登录账号只能包含字母和数字";
+    public static final String LOGIN_ERROR = "账号或密码错误";
+    public static final String NO_USED_PRICCE = "价格不合规";
+    public static final String TRY_AGAIN = "格式错误，请重试";
+    public static final String NO_DISH = "菜品不存在";
+    public static final String NOT_SALE = "菜品已下架";
+    public static final String ENABLE_DISH = "请先下架菜品再删除";
+    public static final String ENABLE_DISH_CATEGORY = "请先下架菜品分类再删除";
+    public static final String ENABLE_USER = "请先停用该收银员";
+    public static final String NOT_DISH_NAME = "菜品名称不能为空";
+    public static final String EXIST_DISH_NAME = "菜品名称已存在";
+    public static final String NO_USED_NAME = "菜品名称不合规";
+    public static final String NOT_CATEGORY_NAME = "菜品分类不能为空";
+    public static final String NOT_EXIST_CATEGORY = "菜品分类不存在";
+    public static final String CATEGORY_EXIST = "菜品分类名称已存在";
+    public static final String CATEGORY_IS_EMPTY = "菜品分类名称不能为空";
+    public static final String DISABLE_CATEGORY = "所选菜品分类已停用，请先启用分类";
+    public static final String DISH_NAME_AMBIGUOUS = "菜名模糊，请精确";
+    public static final String CART_IS_EMPTY = "购物车为空，无法下单";
+    public static final String ORDER_IS_EMPTY = "订单不存在";
+    public static final String ORDER_IS_ERROR = "订单状态不正确";
+    public static final String DELETE_IS_ERROR = "不能删除自己";
+    public static final String TOKEN_EXPIRED = "Token已过期";
+    public static final String TOKEN_SIGNATURE_INVALID = "Token签名无效";
+    public static final String TOKEN_FORMAT_ERROR = "Token格式错误";
+    public static final String TOKEN_IS_EMPTY = "Token为空";
+    public static final String TOKEN_INVALID = "Token非法";
+}

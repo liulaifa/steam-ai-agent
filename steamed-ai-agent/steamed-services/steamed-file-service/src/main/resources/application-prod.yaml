@@ -1,0 +1,11 @@
+server:
+  port: 8081
+
+spring:
+  config:
+    import:
+      - nacos:log.yaml
+      - nacos:jwt.yaml
+      - nacos:oss.yaml
+      - nacos:knife4j.yaml
+      - nacos:sentinel.yaml

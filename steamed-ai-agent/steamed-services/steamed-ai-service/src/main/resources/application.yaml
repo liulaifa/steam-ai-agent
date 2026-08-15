@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: prod
+  ai:
+    openai:
+      base-url: https://dashscope.aliyuncs.com/compatible-mode
+      chat:
+        options:
+          model: qwen-plus
+  application:
+    name: steamed-ai-service
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.100.128:8848
+        namespace: prod
+      discovery:
+        server-addr: 192.168.100.128:8848
+

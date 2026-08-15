@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+target/
+*.class
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Logs
+logs/
+*.log
+*.gz
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env files (local only)
+.env.local
+.env.*.local

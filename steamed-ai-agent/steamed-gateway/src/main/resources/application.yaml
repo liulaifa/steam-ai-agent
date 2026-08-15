@@ -1,0 +1,80 @@
+server:
+  port: 8080
+
+knife4j:
+  gateway:
+    enabled: true                     # 开启网关聚合
+    strategy: discover                # 服务发现模式
+    discover:
+      enabled: true
+      version: openapi3               # 如果子服务是 Swagger2，改为 swagger2
+      # 排除不需要聚合的服务（支持正则）
+      excluded-services:
+        - steamed-gateway                # 排除网关自身
+spring:
+  application:
+    name: steamed-gateway
+#  main:
+#    web-application-type: reactive   # 强制使用响应式
+  config:
+    import:
+      - nacos:jwt.yaml
+      - nacos:log.yaml
+      - nacos:getawayCors.yaml
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.100.128:8848   # Nacos 配置地址
+        namespace: prod
+      discovery:
+        server-addr: 192.168.100.128:8848   # Nacos 发现地址
+    gateway:
+      routes:
+        - id: cart-service
+          uri: lb://steamed-cart-service
+          predicates:
+            - Path=/cart/**
+          filters:
+            StripPrefix=1
+
+        - id: dish-service
+          uri: lb://steamed-dish-service
+          predicates:
+            - Path=/dish/**
+          filters:
+            StripPrefix=1
+
+        - id: cashier-service
+          uri: lb://steamed-cashier-service
+          predicates:
+            - Path=/cashier/**
+          filters:
+            StripPrefix=1
+
+        - id: file-service
+          uri: lb://steamed-file-service
+          predicates:
+            - Path=/file/**
+          filters:
+            StripPrefix=1
+
+        - id: log-service
+          uri: lb://steamed-log-service
+          predicates:
+            - Path=/log/**
+          filters:
+            StripPrefix=1
+
+        - id: order-service
+          uri: lb://steamed-order-service
+          predicates:
+            - Path=/order/**
+          filters:
+            StripPrefix=1
+
+        - id: ai-service
+          uri: lb://steamed-ai-service
+          predicates:
+            - Path=/ai/**
+          filters:
+            StripPrefix=1

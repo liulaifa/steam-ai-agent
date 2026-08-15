@@ -1,0 +1,13 @@
+# 指定激活的环境（dev / prod）
+spring:
+  profiles:
+    active: prod
+  application:
+    name: steamed-cashier-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.100.128:8848   # Nacos 地址
+      config:
+        server-addr: 192.168.100.128:8848
+        namespace: ${spring.profiles.active:public}

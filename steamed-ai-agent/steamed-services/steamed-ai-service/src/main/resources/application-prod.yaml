@@ -1,0 +1,14 @@
+server:
+  port: 8087
+
+spring:
+  config:
+    import:
+      - nacos:mysql.yaml
+      - nacos:mybatisPlus.yaml
+      - nacos:jackson.yaml
+      - nacos:jwt.yaml
+      - nacos:knife4j.yaml
+      - nacos:sentinel.yaml
+      - nacos:log.yaml?group=AI_GROUP
+      - nacos:apiKey.yaml?group=AI_GROUP

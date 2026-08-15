@@ -1,0 +1,25 @@
+server:
+  port: 8082
+
+spring:
+  config:
+    import:
+      - nacos:mysql.yaml
+      - nacos:mybatisPlus.yaml
+      - nacos:jackson.yaml
+      - nacos:redis.yaml
+      - nacos:jwt.yaml
+      - nacos:log.yaml
+      - nacos:knife4j.yaml
+      - nacos:sentinel.yaml
+
+
+
+
+
+
+
+
+
+
+
